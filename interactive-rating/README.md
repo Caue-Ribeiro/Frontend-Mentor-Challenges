@@ -1,3 +1,3 @@
-![Submit image modal](image.png)
+![Submit image modal](./public/image.png)
 
-![Thank you modal](image-1.png)
+![Thank you modal](./public/image-1.png)
