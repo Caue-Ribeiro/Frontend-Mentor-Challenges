@@ -1,0 +1,37 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+    @apply bg-[#ecf3fd] dark:bg-primaryDK;
+}
+
+@theme {
+    --color-darkBlue: #0e133a;
+    --color-secondaryLight: #fff;
+    --color-orangeBG: #c8221a;
+    --font-noto: 'Noto Sans';
+
+    --color-primaryDK: #050a1e;
+    --color-secondaryDK: #1f2535;
+    --color-tertiaryDK: #2f354b;
+    --color-quaternaryDK: #fff;
+}
+
+@layer base {
+    h1 {
+        @apply font-noto font-bold  text-darkBlue dark:text-quaternaryDK text-3xl text-center;
+    }
+
+    h3 {
+        @apply font-noto font-bold  text-darkBlue dark:text-quaternaryDK text-xl;
+    }
+
+    p {
+        @apply font-noto text-sm dark:text-quaternaryDK;
+    }
+}
+
+@utility filters {
+    @apply flex justify-center gap-2.5  [&>li]:bg-secondaryLight [&>button]:px-4.5 [&>button]:py-1.5 [&>button]:rounded-3xl font-noto text-darkBlue text-lg mt-5 md:mt-0 [&>button]:hover:bg-orangeBG [&>button]:cursor-pointer [&>button]:hover:text-white [&>button]:dark:hover:text-secondaryDK  [&>button]:dark:bg-secondaryDK [&>button]:dark:text-quaternaryDK [&>button]:text-secondaryDK [&>button]:ease-in-out  [&>button]:transition-all;
+}
